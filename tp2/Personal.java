@@ -1,4 +1,4 @@
-public class Personal extends Persona {
+public class Personal extends Persona implements MiembroU {
     private String cargo;
     private String departamento;
     private int antiguedad;
@@ -32,5 +32,12 @@ public class Personal extends Persona {
     }
     public String toString(){
         return super.toString()+", Cargo: "+cargo+", Departamento: "+departamento+", Antiguedad: "+antiguedad+" años";
+    }
+
+    public String obtenerrol(){
+        return "Personal";
+    }
+    public String infocompleta(){
+        return "Cargo: " + getCargo() + "Departamento: " + getDepartamento() + "Antiguedad: " + getAntiguedad();
     }
 }

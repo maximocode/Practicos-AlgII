@@ -1,6 +1,6 @@
 /*import tp2.Persona;*/
 
-public class Profesor extends Persona{
+public class Profesor extends Persona implements MiembroU {
     private String especialidad;
     private int añosexperiencia;
     private Materia materiasasignada;
@@ -47,5 +47,12 @@ public class Profesor extends Persona{
     }
     public void hashCode(Profesor profesor){
         System.out.println("El hash code del profesor es: "+profesor.getDocumento().hashCode());
+    }
+
+    public String obtenerrol(){
+        return "Profesor";
+    }
+    public String infocompleta(){
+        return "Especialidad: " + getEspecialidad() + "Años de experiencia: " + getAñosexperiencia() + "Matrerias Asignadas: " + getMateriasasignada();
     }
 }
