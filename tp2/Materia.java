@@ -8,7 +8,7 @@ public class Materia {
         this.nombre=nombre;
         this.codigo=codigo;
         this.creditos=creditos;
-        this.profesor=profesor;
+        this.profesor= null;
     }
     public String getNombre(){
         return nombre;
